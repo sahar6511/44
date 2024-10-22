@@ -1,0 +1,77 @@
+.login-signup{
+    &__container{
+        display: flex;
+        justify-content: center;
+        &--info{
+            width:30%;
+            @include column-flex;
+            justify-content: flex-start;
+            text-align: center;
+            @extend .p-30;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #eee, 0 0 10px $light-gray-color;
+            .logo{
+                height: 50px;
+            }
+            .title{
+                color: $orange-color;
+            }
+            .login,
+            .signup{
+                // width: 100%;
+                
+                .input{
+                    
+                    border: none !important;
+                    outline: none;
+                    border-bottom:1px solid $light-gray-color !important;
+                    &:focus{
+                        border: none !important;
+                        box-shadow: 0 0 0 0.25rem $orange-color !important;
+                    }
+                }
+                .btn{
+                    margin: 0 auto;
+                    width: 40%;
+                    background-color: $green-color;
+                    color: $white-color;
+                    border-color: $green-boarder-color;
+                    &:hover{
+                        background-color:$green-color-hover;
+                        border-color : $green-border-color-hover;
+                    }
+                    
+                    color: $white-color;
+                    
+                }
+                .signup-link,
+                .login-link{
+                    transition-duration: 400ms;
+                    display: inline-block;
+                    color: $primary-color;
+                    &:hover{
+                        color: $orange-color;
+                        cursor: pointer;
+                        border-bottom: 2px solid $orange-color;
+                        padding-bottom: 10px;
+                        
+                    }
+                }
+            }
+        }
+        &__img{
+            border-radius: 5px;
+            box-shadow: 0 0 10px #eee, 0 0 10px $light-gray-color;
+        }
+    }
+
+    .top-menu{
+        background-color: $white-color;
+        a{
+            color: $orange-color;
+        }
+    }
+    .header{
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+}
